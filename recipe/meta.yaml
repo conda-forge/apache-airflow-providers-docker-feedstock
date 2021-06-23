@@ -11,7 +11,7 @@ source:
   sha256: be8f03ebfb8f067ac6fdb36a30da46247666e7520375e2ab1f93975b9f68666d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
+    - apache-airflow >=2.1.0
     - docker-py
     - python >=3.6
 
