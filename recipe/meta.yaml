@@ -22,9 +22,9 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.1.0
-    - docker-py
     - python >=3.6
+    - apache-airflow >=2.1.0
+    - docker-py >=5.0.3
 
 test:
   imports:
