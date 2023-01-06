@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - apache-airflow >=2.4.0
+    - apache-airflow >=2.3.0
     - docker-py >=5.0.3
     - python-dotenv >=0.21.0
 
