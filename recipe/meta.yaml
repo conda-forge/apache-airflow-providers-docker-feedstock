@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-docker" %}
-{% set version = "3.7.3" %}
+{% set version = "3.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-docker-{{ version }}.tar.gz
-  sha256: 27fad24ea7d19c8f7ade11ad29b86933237136d2b7a88664841632fb27397a31
+  sha256: 599ea9ca762e54c1d20e085cac59e431b6ee92c84d5b10f39e22db9f2b01fd39
 
 build:
   noarch: python
