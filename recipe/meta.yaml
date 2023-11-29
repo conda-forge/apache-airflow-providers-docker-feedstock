@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_docker-{{ version }}.tar.gz
   sha256: 2444cbd89cdeb82329827ce2408a1dbc2b1fd00cefb7e6f5922bf6be989454c7
 
 build:
@@ -16,8 +16,8 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
@@ -28,7 +28,6 @@ requirements:
 test:
   imports:
     - airflow.providers.docker
-    - airflow.providers.docker.decorators
   commands:
     - pip check
   requires:
@@ -36,11 +35,9 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-docker package
+  summary: Provider package apache-airflow-providers-docker for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/docker/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-docker/stable/index.html
   dev_url: https://github.com/apache/airflow/
