@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-docker" %}
-{% set version = "3.11.0" %}
+{% set version = "3.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_docker-{{ version }}.tar.gz
-  sha256: 6a6790d1ae21b6edceda6331cf7ae991d9b2e1d76f499c0d9fdf2ec0471d44cc
+  sha256: 9d3ab311b48a923ddc18d5c36768ad6c8f96266053c664862061c8f8d6be5bb3
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
+    - requests >=2.27.0,<2.32.0
     - python >=3.8
     - apache-airflow >=2.7.0
     - docker-py >=6
