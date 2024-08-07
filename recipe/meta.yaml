@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-docker" %}
-{% set version = "3.12.2" %}
+{% set version = "3.12.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_docker-{{ version }}.tar.gz
-  sha256: 0ee250540afbd3d0e336c9bdf62b5193cd86450893ab1b62fd356ea41f28afd8
+  sha256: 2b2126ebe5af3470bdfd3686532e658f3fd425d8d597bc91f897393c9958a863
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -20,7 +20,7 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
-    - python >=3.8
+    - python >=3.8,<4.dev0
     - apache-airflow >=2.7.0
     - docker-py >=7.1.0
     - python-dotenv >=0.21.0
