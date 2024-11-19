@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_docker-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_docker-{{ version }}.tar.gz
   sha256: d4d32be395eaa3496e8fdee6af901553ef9674c24f1d568fc4934a416d32c6a7
 
 build:
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.8,<4.dev0
+    - python >={{ python_min }}
     - apache-airflow >=2.8.0
     - docker-py >=7.1.0
     - python-dotenv >=0.21.0
@@ -31,6 +31,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
