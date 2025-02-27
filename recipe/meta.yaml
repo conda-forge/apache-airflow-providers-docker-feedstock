@@ -38,7 +38,7 @@ about:
   home: https://airflow.apache.org/
   summary: Provider package apache-airflow-providers-docker for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/docker/LICENSE
+  license_file: src/airflow/providers/docker/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-docker/stable/index.html
   dev_url: https://github.com/apache/airflow/
