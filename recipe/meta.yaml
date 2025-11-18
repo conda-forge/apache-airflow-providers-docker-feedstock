@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - apache-airflow-providers-common-compat >=1.8.0
-    - docker >=7.1.0
+    - docker-py >=7.1.0
     - python-dotenv >=0.21.0
 
 test:
