@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-docker
-  version: "4.5.8"
+  version: "4.5.9"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_docker-${{ version }}.tar.gz
-  sha256: d69bd8059ef4e3452e9874e03a173a9034fe240b109c4d7f9c879b6a77f831cc
+  sha256: f26242fa7b8acd294a1aed586f96f528579013fc45eaf48279afe9b11940f3a9
 
 build:
   noarch: python
