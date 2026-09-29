@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
